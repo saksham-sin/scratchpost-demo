@@ -120,6 +120,12 @@ MERGEABLE / CLEAN
 **Both PRs reported `MERGEABLE` / `CLEAN` at the same time.** GitHub's merge
 check is textual; it has no concept of a sequence namespace.
 
+| PR #1 — agent 1 | PR #2 — agent 2 |
+|---|---|
+| ![PR 1](screenshots/case1-pr1.png) | ![PR 2](screenshots/case1-pr2.png) |
+
+Both merged. Both green. `main` broken.
+
 PR #1 was merged. PR #2 was re-checked:
 
 ```console
@@ -263,6 +269,10 @@ stopped agent 2.
 PR [#3](https://github.com/saksham-sin/scratchpost-demo/pull/3) and
 PR [#4](https://github.com/saksham-sin/scratchpost-demo/pull/4) were opened and
 merged in order.
+
+| PR #3 — agent 1, `changeSet 200` | PR #4 — agent 2, `changeSet 201` |
+|---|---|
+| ![PR 3](screenshots/case2-pr3.png) | ![PR 4](screenshots/case2-pr4.png) |
 
 ```console
 $ gh pr view 3 --json mergeable,mergeStateStatus
