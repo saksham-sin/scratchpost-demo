@@ -16,6 +16,18 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="200" author="agent_2">
+        <createTable tableName="refunds">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="payment_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reason" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
     <changeSet id="101" author="platform">
         <addColumn tableName="users">
             <column name="created_at" type="timestamp"/>
