@@ -22,4 +22,8 @@
         </addColumn>
     </changeSet>
 
+    <changeSet id="200" author="agent_1">
+        <createTable tableName="oauth_tokens"/>
+    </changeSet>
+
 </databaseChangeLog>
