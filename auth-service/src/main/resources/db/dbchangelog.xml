@@ -26,4 +26,8 @@
         <createTable tableName="oauth_tokens"/>
     </changeSet>
 
+    <changeSet id="201" author="agent_2">
+        <createTable tableName="refunds"/>
+    </changeSet>
+
 </databaseChangeLog>
