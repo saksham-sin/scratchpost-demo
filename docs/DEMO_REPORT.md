@@ -247,7 +247,18 @@ $ sp claims
 
 No human, no LLM call inside the daemon, no CI round-trip.
 
-### 3.5 The PRs
+### 3.5 Mission Control
+
+`sp ui` serves a local dashboard over the same memory-mapped ledger the daemon
+publishes — no polling, no extra state.
+
+![ScratchPost Mission Control](screenshots/ui-mission-control.png)
+
+Both agents, their port bands, the sequence registry showing `200` and `201`
+committed, and the blocking notice (`#6 — 200 is reserved by agent_1`) that
+stopped agent 2.
+
+### 3.6 The PRs
 
 PR [#3](https://github.com/saksham-sin/scratchpost-demo/pull/3) and
 PR [#4](https://github.com/saksham-sin/scratchpost-demo/pull/4) were opened and
